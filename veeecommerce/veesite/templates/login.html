@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+{% block content %}
+<div class="maincontent">
+    <div class="container">
+    <h2>Login to Pharma  </h2>
+    <form method="POST">
+        {%csrf_token%}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button >Login</button>
+    </form>
+    <div id="message" class="message"></div>
+</div>
+</div>
+{% endblock content %}

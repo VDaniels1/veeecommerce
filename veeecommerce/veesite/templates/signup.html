@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>signup</title>
+{% endblock title %}
+{% block content %}
+<div class="maincontent-signup">
+    <div class="container">
+    <h2>signup to Pharma  </h2>
+    <form method="POST">
+        {%csrf_token%}
+        <div class="form-group">
+            {{form.username}}   
+        </div>
+        <div class="form-group">
+            {{form.first_name}}
+        </div>
+        <div class="form-group">
+            {{form.last_name}}
+        </div>
+        <div class="form-group">
+           {{form.email}}
+        </div>
+         <div class="form-group">
+           {{form.password1}}
+        </div>
+        <div class="form-group">
+           {{form.password2}}
+        </div>
+        <button >SignUp</button>
+    </form>
+    <div id="message" class="message"></div>
+</div>
+</div>
+{% endblock content %}

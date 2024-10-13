@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}<title>Home</title>{% endblock title %}
+    {% block content %}
+        <section class="home ">
+            <div class="home-content ">
+                <div class="home-text ">
+                    <h1>Your Trusted Health Partner</h1>
+                    <p>Quality Care, Every Step of the Way</p>
+                </div>
+                <div class="image-slider ">
+                    <div class="slide active">
+                        <img src="{% static 'images/wheelchair.jfif.jpg' %}" alt="image1">
+                        <div class="slide-info">
+                            <h2>Supportive instruments  </h2>
+                            <h1>new arrivals</h1>
+                            <a href=" {% url "shopingcentre:shop" %}">Shopping</a>
+                        </div>
+                    </div>
+                    <div class="slide ">
+                        <img src="{% static 'images/steth.jfif.jpg' %}" alt="image1">
+                        <div class="slide-info">
+                            <h2>Medical device  </h2>
+                            <h1>new arrivals</h1>
+                            <a href=" {% url "shopingcentre:shop" %}">Shopping</a>
+                        </div>
+                    </div>
+                    <div class="slide ">
+                        <img src="{% static 'images/image4.jpeg.jpg' %}" alt="image1">
+                        <div class="slide-info">
+                            <h2>Surgical instruments </h2>
+                            <h1>new arrivals</h1>
+                            <a href=" {% url "shopingcentre:shop" %}">Shopping</a>
+                        </div>
+                    </div>
+                    <div class="navigation" >
+                        <div class="radio active"></div>
+                        <div class="radio"></div>
+                        <div class="radio"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="{% static 'js/app.js' %}"></script>
+    {% endblock content %}
